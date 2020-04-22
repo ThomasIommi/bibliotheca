@@ -19,9 +19,9 @@
       "dom"
     ],
     "paths": {
-      "@tiommi/ngxs-ionic-storage": [
-        "dist/tiommi/ngxs-ionic-storage/tiommi-ngxs-ionic-storage",
-        "dist/tiommi/ngxs-ionic-storage"
+      "@iommi/ngxs-ionic-storage": [
+        "dist/iommi/ngxs-ionic-storage/iommi-ngxs-ionic-storage",
+        "dist/iommi/ngxs-ionic-storage"
       ]
     }
   },
