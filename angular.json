@@ -1,6 +1,48 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
-  "projects": {}
+  "projects": {
+    "@tiommi/ngxs-ionic-storage": {
+      "projectType": "library",
+      "root": "projects/tiommi/ngxs-ionic-storage",
+      "sourceRoot": "projects/tiommi/ngxs-ionic-storage/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/tiommi/ngxs-ionic-storage/tsconfig.lib.json",
+            "project": "projects/tiommi/ngxs-ionic-storage/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/tiommi/ngxs-ionic-storage/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/tiommi/ngxs-ionic-storage/src/test.ts",
+            "tsConfig": "projects/tiommi/ngxs-ionic-storage/tsconfig.spec.json",
+            "karmaConfig": "projects/tiommi/ngxs-ionic-storage/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/tiommi/ngxs-ionic-storage/tsconfig.lib.json",
+              "projects/tiommi/ngxs-ionic-storage/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "@tiommi/ngxs-ionic-storage"
 }

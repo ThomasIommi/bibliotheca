@@ -17,7 +17,13 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@tiommi/ngxs-ionic-storage": [
+        "dist/tiommi/ngxs-ionic-storage/tiommi-ngxs-ionic-storage",
+        "dist/tiommi/ngxs-ionic-storage"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

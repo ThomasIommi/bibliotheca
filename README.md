@@ -1,27 +1,37 @@
 # Bibliotheca
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.1.
+Simply a project to store all my personal Angular libraries!
 
-## Development server
+## Instructions
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+All commands and file path assume that you are in the root folder of the project _bibliotheca_
 
-## Code scaffolding
+### Generate a new library
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+`ng g library @<scope>/<library-name>`
 
-## Build
+### Delete a library
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+1) Delete its folders in the folder _./projects_
+2) Delete its references in the file _./tsconfig.json_
+3) Delete its references in the file _./angular.json_
+4) Check if there are some unused dependencies in the file _'./package.json'_ 
 
-## Running unit tests
+### Build a library
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+`ng build -- prod @<scope>/<library-name>`
 
-## Running end-to-end tests
+### Publish a library
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+You need to be registered on [NPMJS](https://www.npmjs.com/), then log in with `npm login` on your terminal.
 
-## Further help
+If your packages are scoped you'll need to register your organization too, check [here](https://docs.npmjs.com/orgs/) for more informations.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```
+cd ./dist/<scope>/<library-name>
+npm publish     // add '--access public' if you have a free org 
+```
+
+## Authors 
+
+* __Thomas Iommi__ - _Initial work_ - [GitHub](https://github.com/ThomasIommi)
