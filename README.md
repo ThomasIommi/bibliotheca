@@ -1,6 +1,6 @@
 # Bibliotheca
 
-Simply a project to store all my personal Angular libraries!
+Simply a project to store and share all my personal Angular libraries!
 
 ## Instructions
 
