@@ -1,6 +1,18 @@
 {
   "name": "@tiommi/ngxs-ionic-storage",
-  "version": "0.0.1",
+  "version": "0.0.2",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ThomasIommi/bibliotheca/tree/master/projects/tiommi/ngxs-ionic-storage"
+  },
+  "author": "Thomas Iommi",
+  "license": "MIT",
+  "keywords": [
+    "NGXS",
+    "Ionic Storage",
+    "NGXS Async Storage Plugin",
+    "NGXS Storage"
+  ],
   "peerDependencies": {
     "@angular/common": "^9.0.7",
     "@angular/core": "^9.0.7",

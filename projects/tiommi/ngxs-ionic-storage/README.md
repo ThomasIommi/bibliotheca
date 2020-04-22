@@ -12,7 +12,7 @@ It make possible to automatically save your NGXS state in any of this storages:
 ## Config Options
 
 | PROPERTY | TYPE | DEFAULT VALUE | DESCRIPTION |
-|:--------:|:----:|:-------------:|:-----------:|
+|:--------:|:----:|:-------------:|:------------|
 | __key__ | `string` | _@@STORE_ | Main key name |
 | __name__ | `string` | _\_ionicstorage_ | Storage name;
 | __version__ | `number` | 1.0 | Storage version, needed for storage updates |
