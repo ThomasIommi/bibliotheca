@@ -19,7 +19,7 @@ All commands and file path assume that you are in the root folder of the project
 
 ### Build a library
 
-`ng build -- prod @<scope>/<library-name>`
+`ng build --configuration prod @<scope>/<library-name>`
 
 ### Publish a library
 
@@ -31,6 +31,23 @@ If your packages are scoped you'll need to register your organization too, check
 cd ./dist/<scope>/<library-name>
 npm publish     // add '--access public' if you have a free org 
 ```
+
+### Using a library in local development
+
+By using [`npm link`](https://docs.npmjs.com/cli/v7/commands/npm-link) it's possible to try out a library in a local project, even with watchers and auto-refresh:
+
+```
+ng build --watch <scope>/<library-name>
+cd ./dist/<scope>/<library-name>
+npm link
+cd <other-project-path>
+npm link <scope>/<library-name>
+```
+
+⚠ Remember to set the flag `preserveSymlinks` to true under the host project _angular.json_.
+Under `projects.<project-name>.architect.build.options`.
+
+
 
 ## Authors 
 
