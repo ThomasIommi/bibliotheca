@@ -42,6 +42,37 @@
           }
         }
       }
+    },
+    "@iommi/candlestick-chart": {
+      "projectType": "library",
+      "root": "projects/iommi/candlestick-chart",
+      "sourceRoot": "projects/iommi/candlestick-chart/src",
+      "prefix": "iommi",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/iommi/candlestick-chart/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/iommi/candlestick-chart/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/iommi/candlestick-chart/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/iommi/candlestick-chart/src/test.ts",
+            "tsConfig": "projects/iommi/candlestick-chart/tsconfig.spec.json",
+            "karmaConfig": "projects/iommi/candlestick-chart/karma.conf.js"
+          }
+        }
+      }
     }
   },
   "defaultProject": "@iommi/ngxs-ionic-storage"

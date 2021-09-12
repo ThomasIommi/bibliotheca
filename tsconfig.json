@@ -19,6 +19,10 @@
       "dom"
     ],
     "paths": {
+      "@iommi/candlestick-chart": [
+        "dist/iommi/candlestick-chart/iommi-candlestick-chart",
+        "dist/iommi/candlestick-chart"
+      ],
       "@iommi/ngxs-ionic-storage": [
         "dist/iommi/ngxs-ionic-storage/iommi-ngxs-ionic-storage",
         "dist/iommi/ngxs-ionic-storage"
